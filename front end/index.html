@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>TRAPPIST-1 system</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel=stylesheet href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAPPIST-1 System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="hamburger-menu">
-    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-    <div class="menu">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">PLANETS</a></li>
-        <li><a href="#">TEAM</a></li>
-      </ul>
+    <div class="hamburger-menu">
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <div class="menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PLANETS</a></li>
+          <li><a href="#">TEAM</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-
-  <div class="container">
-    <div class="sun">
-      <img src="./images/TRAPPIST-1-star.png" alt="sun">
+    <div class="container">
+        <div class="sun">
+            <img src="./images/TRAPPIST-1-star.png" alt="sun">
+        </div>
+        <div class="TRAPPIST-1b"></div>
+        <div class="TRAPPIST-1c"></div>
+        <div class="TRAPPIST-1d"></div>
+        <div class="TRAPPIST-1e"></div>
+        <div class="TRAPPIST-1f"></div>
+        <div class="TRAPPIST-1g"></div>
+        <div class="TRAPPIST-1h"></div>
     </div>
-    <div class="TRAPPIST-1b"></div>
-    <div class="TRAPPIST-1c"></div>
-    <div class="TRAPPIST-1d">
+
+    <div class="planet-info" id="planet-info">
+        <h3 id="planet-name">Planet Name</h3>
+        <p id="planet-speed">Speed: -</p>
+        <p id="planet-size">Size: -</p>
     </div>
-    <div class="TRAPPIST-1e"></div>
-    <div class="TRAPPIST-1f"></div>
-    <div class="TRAPPIST-1g"></div>
-    <div class="TRAPPIST-1h"></div>
+
+    <div class="planet-links">
+        <a href="#" onclick="selectPlanet('TRAPPIST-1 star', '52,300 miles (84,180 KM)', '12% of Sun is Diameter')">TRAPPIST-1 star</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1b', '8,846 miles (14,236 KM)', 'Orbit Every 1.5 Earth Days')">TRAPPIST-1b</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1c', '8,846 (14,236 KM)', 'Orbit Every 1.5 earth days')">TRAPPIST-1c</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1d', '8,718 miles (14,030 km)', 'Orbit Every 2.4 Earth days')">TRAPPIST-1d</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1e', '6,246 miles (10,050 km)', 'Orbit Every 4.05 Earth days')">TRAPPIST-1e</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1f', '7,292 miles (11,736 km)', 'Orbit Every 6.1 Earth days')">TRAPPIST-1f</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1g', '8,282 miles (13,330 km)', 'Orbit Every 9.2 Earth days')">TRAPPIST-1g</a>
+        <a href="#" onclick="selectPlanet('TRAPPIST-1h', '8,950 miles (14,400 km)', 'Orbit Every 12.4 Earth Days')">TRAPPIST-1h</a>
     </div>
-  </div>
-  
-  <div class="planet-links">
-    <a href="#trappist-1-star">TRAPPIST-1 star</a>
-    <a href="#trappist-1b">TRAPPIST-1b</a>
-    <a href="#trappist-1c">TRAPPIST-1c</a>
-    <a href="#trappist-1d">TRAPPIST-1d</a>
-    <a href="#trappist-1e">TRAPPIST-1e</a>
-    <a href="#trappist-1f">TRAPPIST-1f</a>
-    <a href="#trappist-1g">TRAPPIST-1g</a>
-    <a href="#trappist-1h">TRAPPIST-1h</a>
-  </div>
 
-
-<script src="script.js"></script>
-
-
+    <script src="script.js"></script>
 </body>
-
 </html>
