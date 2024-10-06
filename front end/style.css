@@ -2,36 +2,41 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;  /* Vertically centers */
+    justify-content: center;  /* Horizontally centers */
     background-color: black;
-    overflow: hidden;
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
+    overflow: hidden;
 }
+/* Adjusting the container to be centered */
 .container {
     font-size: 6px;
     width: 40em;
     height: 40em;
     position: relative;
+    display: flex;
+    justify-content: center;
+    
 }
 img{
     height: 130%;
     width: 130%;
 }
 
-.sun {
+.center-planet {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15em;
-    left: 15em;
-    width: 10em;
-    height: 10em;
+    top: 16em;
+    left: 16em;
+    width: 9em;
+    height: 9em;
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
     animation: orbit 50s linear infinite;
+ 
 }
 .TRAPPIST-1b,
 .TRAPPIST-1c,
@@ -40,34 +45,42 @@ img{
 .TRAPPIST-1f,
 .TRAPPIST-1g,
 .TRAPPIST-1h {
-    position: absolute;
     border-style: solid;
     border-color: white transparent transparent transparent;
     border-width: 0.1em 0.1em 0 0;
-    border-radius: 50%;
+    border-radius: 90%;
+    /* background-color: rgba(31, 83, 33, 0.28); */
+    position: absolute;
+    border-style: solid;
+    animation: orbit 15s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
 }
 .TRAPPIST-1b {
-    top: 12.5em;
-    left: 12.5em;
-    width: 15em;
-    height: 15em;
-    animation: orbit 68.7s linear infinite;
+    top: 11.5em;
+    left: 11.5em;
+    width: 17em;
+    height: 17em;
+
+    animation: orbit 15s linear infinite;
 }
 
 .TRAPPIST-1c {
-    top: 10em;
-    left: 10em;
-    width: 20em;
-    height: 20em;
-    animation: orbit 48.7s linear infinite;
+    top: 7.5em;
+    left: 7.5em;
+    width: 25em;
+    height: 25em;
+    animation: orbit 20.4s linear infinite;
 }
 
 .TRAPPIST-1d {
-    top: 6em;
-    left: 6em;
-    width: 28em;
-    height: 28em; 
-    animation: orbit 36.5s linear infinite;   
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em; 
+    animation: orbit 40.5s linear infinite;   
 }
 
 .TRAPPIST-1e {
@@ -75,28 +88,28 @@ img{
     left: 2.5em;
     width: 36em;
     height: 36em; 
-    animation: orbit 26.5s linear infinite;
+    animation: orbit 60.1s linear infinite;
 }
 .TRAPPIST-1f {
     top: -2em;
     left: -2em;
     width: 45em;
     height: 45em; 
-    animation: orbit 21s linear infinite;
+    animation: orbit 92s linear infinite;
 }
 .TRAPPIST-1g {
     top: -7em;
     left: -7em;
     width: 55em;
     height: 55em; 
-    animation: orbit 17s linear infinite;
+    animation: orbit 124s linear infinite;
 }
 .TRAPPIST-1h {
     top: -12em;
     left: -12em;
     width: 65em;
     height: 65em; 
-    animation: orbit 19s linear infinite;
+    animation: orbit 189s linear infinite;
 }
 
 .TRAPPIST-1b::before,
@@ -106,68 +119,69 @@ img{
 .TRAPPIST-1f::before,
 .TRAPPIST-1g::before,
 .TRAPPIST-1h::before{
-    content: '';
+     content: '';
     position: absolute;
     border-radius: 50%;
+    background-size: cover;
     animation: orbit 30s linear infinite;
+     background-position: center;
 }
 .TRAPPIST-1b::before {
     top: 1.5em;
-    right: 0.8em;
-    width: 2em;
-    height: 2em;
-    background-image: url('./images/TRAPPIST-1b.png');
+    right: -1.5em;
+    width: 4.8em;
+    height: 4.8em;
+    background-image: url('./Images-New/TRAPPIST-1b.png');
     background-size: cover;
 }
 .TRAPPIST-1c::before {
-    top: 2em;
-    right: 2em;
-    width: 2em;
-    height: 2em;
-    background-image: url('./images/TRAPPIST-1c.png');
+    top: 1.3em;
+    right: 1em;
+    width: 4.9em;
+    height: 4.9em;
+    background-image: url('./Images-New/TRAPPIST-1c.png');
     background-size: cover;
 }
 .TRAPPIST-1d::before {
     top: 3em;
-    right: 0em;
-    width: 5em;
-    height: 5em;
-    background-image: url('./images/TRAPPIST-1d.png');
+    right: 2.5em;
+    width: 3em;
+    height: 3em;
+    background-image: url('./Images-New/TRAPPIST-1d.png');
     background-size: cover;
 }
 .TRAPPIST-1e::before {
-    top: 5em;
-    right: 3em;
-    width: 3em;
-    height: 3em;
-    background-image: url('./images/TRAPPIST-1e.png');
+    top: 3.8em;
+    right: 3.5em;
+    width: 3.5em;
+    height: 3.5em;
+    background-image: url('./Images-New/TRAPPIST-1e.png');
     background-size: cover;
 }
 .TRAPPIST-1f::before {
-    top: 6em;
-    right: 3em;
-    width: 5em;
-    height: 5em;
-    background-image: url('./images/TRAPPIST-1f.png');
+    top: 5em;
+    right: 3.2em;
+    width: 4.7em;
+    height: 4.7em;
+    background-image: url('./Images-New/TRAPPIST-1f.png');
     background-size: cover;
 }
 .TRAPPIST-1g::before {
-    top: 7.5em;
+    top: 7em;
     right: 5em;
-    width: 4.5em;
-    height: 4.5em;
-    background-image: url('./images/TRAPPIST-1g.png');
+    width: 5em;
+    height: 5em;
+    background-image: url('./Images-New/TRAPPIST-1g.png');
     background-size: cover;
 }
 .TRAPPIST-1h::before {
-    top: 9em;
-    right: 6.5em;
-    width: 4em;
-    height: 4em;
-    background-image: url('./images/TRAPPIST-1h.png');
+    top: 8.4em;
+    right: 8em;
+    width: 3em;
+    height: 3em;
+    background-image: url('./Images-New/TRAPPIST-1h.png');
     background-size: cover;
 }
-
 
 .star {
     position: absolute;

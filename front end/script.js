@@ -55,7 +55,7 @@ document.querySelectorAll('.planet-links a').forEach(link => {
       event.preventDefault(); 
       const planetName = link.innerText; 
       let speed, size;
-
+      console.log(planetName)
       switch (planetName) {
           case 'TRAPPIST-1b':
               speed = '8.856 miles (14.236 KM)'; 
@@ -90,6 +90,7 @@ document.querySelectorAll('.planet-links a').forEach(link => {
               size = 'Unknown';
               break;
       }
+
 
       selectPlanet(planetName, speed, size, link); 
   });

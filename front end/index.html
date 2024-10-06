@@ -6,22 +6,24 @@
     <title>TRAPPIST-1 System</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+  
+  </style>
 </head>
 <body>
     <div class="hamburger-menu">
       <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
       <div class="menu">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PLANETS</a></li>
-          <li><a href="#">TEAM</a></li>
+          <li><a href="/front end/index.html">HOME</a></li>
+          <li><a href="/front end/planet.html">PLANETS</a></li>
+          <li><a href="/front end/teams.html">TEAM</a></li>
         </ul>
       </div>
     </div>
 
     <div class="container">
-        <div class="sun">
-            <img src="./images/TRAPPIST-1-star.png" alt="sun">
+        <div class="center-planet">
+            <img src="./Images-New/sun.png" alt="center-planet">
         </div>
         <div class="TRAPPIST-1b"></div>
         <div class="TRAPPIST-1c"></div>
@@ -38,7 +40,7 @@
         <p id="planet-size">Size: -</p>
     </div>
 
-    <div class="planet-links">
+    <div class="planet-links ">
         <a href="#" onclick="selectPlanet('TRAPPIST-1 star', '52,300 miles (84,180 KM)', '12% of Sun is Diameter')">TRAPPIST-1 star</a>
         <a href="#" onclick="selectPlanet('TRAPPIST-1b', '8,846 miles (14,236 KM)', 'Orbit Every 1.5 Earth Days')">TRAPPIST-1b</a>
         <a href="#" onclick="selectPlanet('TRAPPIST-1c', '8,846 (14,236 KM)', 'Orbit Every 1.5 earth days')">TRAPPIST-1c</a>

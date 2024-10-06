@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TRAPPIST-1 system</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="hamburger-menu">
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="menu">
+      <ul>
+      <li><a href="/front end/index.html">HOME</a></li>
+          <li><a href="/front end/planet.html">PLANETS</a></li>
+        <li><a href="/front end/teams.html">TEAM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="planet-image"></div> <!-- Placeholder for planet image -->
+  </div>
+
+  <div class="planet-links">
+    <a href="#trappist-1-star" onclick="showPlanet('star')">TRAPPIST-1 star</a>
+    <a href="#trappist-1b" onclick="showPlanet('1b')">TRAPPIST-1b</a>
+    <a href="#trappist-1c" onclick="showPlanet('1c')">TRAPPIST-1c</a>
+    <a href="#trappist-1d" onclick="showPlanet('1d')">TRAPPIST-1d</a>
+    <a href="#trappist-1e" onclick="showPlanet('1e')">TRAPPIST-1e</a>
+    <a href="#trappist-1f" onclick="showPlanet('1f')">TRAPPIST-1f</a>
+    <a href="#trappist-1g" onclick="showPlanet('1g')">TRAPPIST-1g</a>
+    <a href="#trappist-1h" onclick="showPlanet('1h')">TRAPPIST-1h</a>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="planet-sidebar" class="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" onclick="closeSidebar()">X</button>
+      <h2>Planet Information</h2>
+      <h2>-------------------</h2>
+      <p id="planet-info">Details about the planet will be displayed here.</p>
+    </div>
+  </div>
+
+<script src="script1.js"></script>
+
+</body>
+</html>

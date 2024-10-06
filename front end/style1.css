@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* Navbar (Hamburger Menu) */
+.hamburger-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 3;
+}
+
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's always above the sidebar */
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease;
+    z-index: 999; /* Sidebar should be behind the hamburger */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.menu.active {
+    left: 0;
+}
+
+/* Container and centered planet image */
+.container {
+    font-size: 6px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#planet-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -25%);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: background-image 0.5s ease;
+    animation: orbit 50s linear infinite;
+}
+
+/* Sidebar for planet info */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    transition: right 0.3s ease;
+    z-index: 3;
+    height: 100vh; /* or a specific height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  
+}
+
+.sidebar-content {
+    padding: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.close-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+/* Planet links section */
+.planet-links {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    padding: 10px 0;
+}
+
+.planet-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.planet-links a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-45%, -25%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-45%, -25%) rotate(360deg);
+    }
+}
